@@ -17,7 +17,7 @@
             @foreach($posts as $post)
                 <li class="archive-item">
                     <a href="{{route('admin-edit',['id'=>$post->id])}}" class="post-article">
-                        <time class="post-article-date" datetime="2016-9-16">{{ date('d M, Y', strtotime($post->created_at)) }}</time>
+                        <time class="post-article-date" datetime="{{ date('d M, Y', strtotime($post->created_at)) }}">{{ date('d M, Y', strtotime($post->created_at)) }}</time>
                         <h1 class="post-article-title">{{$post->title}}</h1>
                     </a>
                 </li>
